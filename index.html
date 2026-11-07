@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nischal Kharel · Software Engineer</title>
+  <meta name="description" content="Nischal Kharel is a senior Computer Science student at the University of Pittsburgh who builds AI agents, backend services, and data pipelines. Three software engineering terms at BNY." />
+  <meta name="author" content="Nischal Kharel" />
+  <meta name="theme-color" content="#F7F9FC" />
+
+  <!-- Link previews (LinkedIn, Slack, iMessage, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nischal Kharel · Software Engineer" />
+  <meta property="og:description" content="I build reliable AI agents, backend services, and data pipelines. CS @ Pitt '27 · 3 SWE terms at BNY." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Set the theme before first paint to avoid a light/dark flash -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        d.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Nischal Kharel, back to top">
+        <span class="brand-mark" aria-hidden="true">NK</span>
+        <span class="brand-name">Nischal Kharel</span>
+      </a>
+      <button class="nav-toggle icon-btn" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="bar-top" d="M4 7h16"/><path class="bar-mid" d="M4 12h16"/><path class="bar-bot" d="M4 17h16"/></svg>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+          <a class="btn btn-primary btn-small" data-resume-link href="assets/Nischal_Kharel_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <span id="top" class="anchor-top" aria-hidden="true"></span>
+
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container" id="hero-content">
+        <noscript>
+          <h1 class="hero-title">Nischal Kharel</h1>
+          <p class="hero-headline">Software engineer · CS @ University of Pittsburgh</p>
+          <p>This site needs JavaScript to show its content. You can reach me at
+            <a href="mailto:nischalkharel7@gmail.com">nischalkharel7@gmail.com</a> or on
+            <a href="https://www.linkedin.com/in/nischalkharel5/">LinkedIn</a>.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title" id="about-title">A little about me</h2>
+        </header>
+        <div id="about-content"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title" id="experience-title">Where I've worked</h2>
+          <p class="section-lead">Three terms shipping production software at BNY, plus teaching and research at Pitt.</p>
+        </header>
+        <div class="experience-list" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section-title" id="projects-title">Things I've built</h2>
+          <p class="section-lead">Click into any project for the full story: what it does, how it works, and the parts I built.</p>
+        </header>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section-title" id="skills-title">My toolbox</h2>
+        </header>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Education</p>
+          <h2 class="section-title" id="education-title">Where I'm studying</h2>
+        </header>
+        <div id="education-card"></div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container" id="contact-content"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
