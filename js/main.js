@@ -102,7 +102,7 @@ ${lines}
     // Decorative: the organization's name is always printed right next to it
     if (item.logoImg) {
       const pad = Number.isFinite(item.logoPad) ? ` style="padding:${item.logoPad}px"` : "";
-      return `<span class="${cls} has-img"${pad} aria-hidden="true"><img src="${esc(item.logoImg)}" alt="" loading="lazy"></span>`;
+      return `<span class="${cls} has-img"${pad} aria-hidden="true"><img src="${esc(item.logoImg)}" alt=""></span>`;
     }
     const style = `--logo-bg:${esc(item.logoBg || "var(--primary)")};--logo-fg:${esc(item.logoFg || "#fff")}`;
     return `<span class="${cls}" style="${style}" aria-hidden="true">${esc(item.logo)}</span>`;
