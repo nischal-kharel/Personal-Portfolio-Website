@@ -35,15 +35,28 @@ python serve.py
 It turns off browser caching, so a normal refresh always shows your latest edits.
 With `python -m http.server` or by double-clicking `index.html`, the browser may cache old JS and CSS. Press **Ctrl + Shift + R** to force a reload.
 
-## Deploy to GitHub Pages (free)
+## Hosting (GitHub Pages)
 
-1. Push this repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then click **Save**.
-4. The site will be live at `https://<your-username>.github.io/Personal-Portfolio-Website/` within a minute or two.
+The site is live at **https://nischal-kharel.github.io/** and is served for free by GitHub Pages from the `main` branch of the
+`nischal-kharel/nischal-kharel.github.io` repo.
 
-To get the shorter `https://<your-username>.github.io` URL, rename the repo to `<your-username>.github.io`.
-You can also add a custom domain (e.g. `nischalkharel.dev`) in the same Pages settings.
+**To update the live site,** commit and push to `main`. GitHub redeploys in about a minute.
+Check progress under the repo's **Actions** tab, then hard-refresh with **Ctrl + Shift + R**.
+
+One-time setup (already done):
+
+1. Rename the repo to `nischal-kharel.github.io` under **Settings → General**. That repo name is what gives the short URL.
+2. Make the repo public under **Settings → General → Danger Zone**. Free Pages requires a public repo.
+3. Under **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then click **Save**.
+
+Notes:
+
+- `.nojekyll` tells Pages to serve the files as they are, skipping its Jekyll build step.
+- **Link previews:** `index.html` and `project.html` point at `assets/og-image.jpg` with absolute URLs.
+  - If the site URL changes, update `og:url`, `og:image`, and `canonical` in both files.
+  - If you change the photo or headline, regenerate the image.
+  - To re-scrape a preview after changes, use [LinkedIn's Post Inspector](https://www.linkedin.com/post-inspector/).
+- **Custom domain (optional):** buy one (e.g. `nischalkharel.dev`), then add it under **Settings → Pages → Custom domain** and follow GitHub's DNS instructions.
 
 ## File structure
 
@@ -55,5 +68,7 @@ js/data.js          ← all site content
 js/common.js        Shared helpers: icons, theme, nav, cover art
 js/main.js          Renders the home page
 js/project.js       Renders a project page
-assets/             Favicon, resume PDF, project images
+assets/             Favicon, resume PDF, headshot, logos, link-preview image
+.nojekyll           Tells GitHub Pages to serve files as-is
+serve.py            Local no-cache preview server
 ```
